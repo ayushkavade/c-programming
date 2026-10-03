@@ -1,4 +1,3 @@
-
 #include<stdio.h>
 int main(){
 int N,i,j,digit,cond;
