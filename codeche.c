@@ -1,42 +1,36 @@
 #include <stdio.h>
-
 int main()
 {
-    // your code goes here
-    int T, N, i, j, k, count = 0;
-    char s2[6] = "aeiou";
-    scanf("%d", &T);
-    for (i = 0; i < T; i++)
+    int t, i, j, n, count = 0, k,a=0;
+    char s[1000];
+    char s1[7] = "aeiou";
+    scanf("%d", &t);
+
+    scanf("%s", &s[t+1]);
+    for (j = 0; j < t; j++)
     {
-
-        scanf("%d", &N);
-        char s[N];
-
-        scanf("%(N-1)s", s);
-
-        for (j = 0; j < N; j++)
+        /* code */ for (k = 0; k < 5; k++)
         {
-
-            for (k = 0; k < 6; k++)
-            {
-                if (s[j] != s2[k])
+            /* code */ if (s1[k] != s[j])
+            {   
+                /* code */ count++;
+                if (count>=20)
                 {
-
-                    count++;
+                    /* code */a=1;
+                    
                 }
-                else
-                    count = 0;
+                
             }
+            else
+                count = 0;
+            
         }
-
-        if (count == 3)
-        {
-
-            printf("yes\n");
-        }
-        else
-            printf("no\n");
-        count = 0;
     }
+    if (a!=0)
+    {
+        /* code */ printf("no\n");
+    }
+    else
+        printf("yes\n");
     return 0;
 }
